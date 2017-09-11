@@ -4,7 +4,7 @@ if (typeof torrentToWeb === 'undefined') {
 
 torrentToWeb.processUrl = function(url, notificationId)
 {
-    torrentToWeb.notify('Retrieving torrent file');
+    //torrentToWeb.notify('Retrieving torrent file');
 
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
@@ -27,7 +27,7 @@ torrentToWeb.processUrl = function(url, notificationId)
             return;
         }
 
-        torrentToWeb.notify('Uploading torrent file');
+        //torrentToWeb.notify('Uploading torrent file');
         torrentToWeb.createAdapter(function(adapter) {
             adapter.send(filename, request.response, function(success) {
                 torrentToWeb.notify(success ? 'Torrent file uploaded' : 'Error while uploading torrent file');
